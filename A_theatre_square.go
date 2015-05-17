@@ -2,24 +2,12 @@ package main
 
 import (
     "fmt"
+    "math"
 )
 
 func main() {
-  var n, m , a, ndiva, mdiva int64
+  var n, m , a float64
 
-  fmt.Scanf("%d %d %d", &n, &m, &a)
-
-  if n % a == 0 {
-    ndiva = n / a
-  } else {
-    ndiva = n / a + 1
-  }
-
-  if m % a == 0 {
-    mdiva = m / a
-  } else {
-    mdiva = m / a + 1
-  }
-
-  fmt.Println(ndiva * mdiva)
+  fmt.Scanf("%f %f %f", &n, &m, &a)
+  fmt.Println(int64(math.Ceil(n / a) * math.Ceil(m / a)))
 }
